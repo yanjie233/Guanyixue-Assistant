@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "莞易学助手",
+  "version": "3.2",
+  "author": "github：yanjie233",
+  "description": "莞易学助手 - 快捷学习，提升效率！",
+  "action": {
+    "default_title": "莞易学助手",
+    "default_popup": "popup.html"
+  },
+  "incognito": "split",
+  "permissions": ["declarativeNetRequest", "tabs"],
+  "host_permissions": ["*://study.dgjy.net/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://study.dgjy.net/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
